@@ -3,8 +3,10 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const ControlComponente = ({ 
-    presupuesto, 
+    
     gastos,
+    setGasto,
+    presupuesto, 
     setPresupuesto,
     setIsValidoPresupuesto 
 
@@ -35,9 +37,10 @@ const ControlComponente = ({
     }
 
     const handleResetApp = () => {
-        if (confirm('¿Estás seguro de que deseas reiniciar la aplicación?')) {
+        const resultado = confirm('¿Estás seguro de que deseas reiniciar la aplicación?'); 
+        if (resultado) {
+            setGasto([]);
             setPresupuesto(0);
-            setGastado([]);
             setIsValidoPresupuesto(false);
             // Aquí podrías también limpiar los gastos si es necesario
         }
