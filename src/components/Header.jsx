@@ -8,7 +8,7 @@ const Header = ({
     setIsValidoPresupuesto, 
     isValidoPresupuesto, 
     gastos, 
-    setGastos }) => {
+    setGasto }) => {
   return (
     <header>
       <h1>Planificador de Gastos</h1>
@@ -16,7 +16,7 @@ const Header = ({
         <ControlComponente 
           presupuesto={presupuesto}
           gastos={gastos}
-          setGastos={setGastos}
+          setGasto={setGasto}
           setPresupuesto={setPresupuesto}
           setIsValidoPresupuesto={setIsValidoPresupuesto}
           />
